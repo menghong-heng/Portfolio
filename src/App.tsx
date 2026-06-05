@@ -672,14 +672,14 @@ function App() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="grid gap-5 lg:grid-cols-2"
+              className="flex justify-center"
             >
               {awards.map((award) => (
                 <motion.article
                   key={award.title}
                   variants={fadeUp}
                   whileHover={{ y: -4 }}
-                  className="premium-card rounded-3xl p-6 sm:p-8"
+                  className="premium-card max-w-2xl w-full rounded-3xl p-6 sm:p-8"
                 >
                   <Award className="mb-5 h-7 w-7 text-primary/60" />
                   <p className="text-sm font-medium text-primary/70">{award.period}</p>
