@@ -146,7 +146,7 @@ const projects = [
     period: '2026',
     stack: 'Python, Pandas, PySpark, MySQL, SQLAlchemy, Jupyter Notebook',
     description:
-      'Loaded Amazon Sale Report dataset into MySQL via Python ETL, analyzing sales trends and category performance with PySpark and SQL.',
+      'Loaded the Amazon Sale Report dataset into MySQL through a Python ETL notebook, handled cleaning and schema creation, then used PySpark and SQL-backed notebooks to analyze sales trends, order patterns, and category performance.',
     href: 'https://github.com/menghong-heng/E_Commerce_Analysis',
     tags: ['EDA', 'SQL', 'PySpark'],
   },
@@ -679,11 +679,11 @@ function App() {
                   key={award.title}
                   variants={fadeUp}
                   whileHover={{ y: -4 }}
-                  className="premium-card max-w-2xl w-full rounded-3xl p-6 sm:p-8"
+                  className="premium-card max-w-3xl w-full rounded-3xl p-6 sm:p-8"
                 >
                   <Award className="mb-5 h-7 w-7 text-primary/60" />
                   <p className="text-sm font-medium text-primary/70">{award.period}</p>
-                  <h3 className="section-title-display mt-2 text-2xl text-foreground">
+                  <h3 className="section-title-display mt-2 text-xl sm:text-2xl text-foreground">
                     {award.title}
                   </h3>
                   <p className="mt-4 leading-relaxed text-foreground/55">
