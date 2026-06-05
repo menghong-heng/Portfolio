@@ -44,18 +44,6 @@ const education = [
     meta: 'Phnom Penh, Cambodia',
     period: 'Feb 2024 - Present',
   },
-  {
-    school: 'Beltei International School',
-    program: 'High School Diploma',
-    meta: 'Phnom Penh, Cambodia',
-    period: '2021 - 2023',
-  },
-  {
-    school: 'Hun Sen Angtasom High School',
-    program: 'High School',
-    meta: 'Takeo Province, Cambodia',
-    period: '2017 - 2021',
-  },
 ]
 
 const experience = [
