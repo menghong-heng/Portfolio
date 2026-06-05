@@ -146,7 +146,7 @@ const projects = [
     period: '2026',
     stack: 'Python, Pandas, PySpark, MySQL, SQLAlchemy, Jupyter Notebook',
     description:
-      'Loaded the Amazon Sale Report dataset into MySQL through a Python ETL notebook, handled cleaning and schema creation, then used PySpark and SQL-backed notebooks to analyze sales trends, order patterns, and category performance.',
+      'Loaded Amazon Sale Report dataset into MySQL via Python ETL, analyzing sales trends and category performance with PySpark and SQL.',
     href: 'https://github.com/menghong-heng/E_Commerce_Analysis',
     tags: ['EDA', 'SQL', 'PySpark'],
   },
