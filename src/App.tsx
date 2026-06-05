@@ -193,12 +193,6 @@ const awards = [
     description:
       'Represented startup team KeyEZ in a nationwide university innovation competition, reaching the Top 10 out of all competing teams.',
   },
-  {
-    title: 'Cambodia Book Fair - STEM Outreach Participant',
-    period: '2025',
-    description:
-      'Participated in the Cambodia Book Fair, contributing to efforts encouraging STEM education and motivating local students.',
-  },
 ]
 
 const fadeUp: Variants = {
