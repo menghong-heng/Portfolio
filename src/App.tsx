@@ -6,6 +6,8 @@ import {
   BookOpen,
   BriefcaseBusiness,
   Calendar,
+  ChevronDown,
+  ChevronUp,
   Database,
   GitBranch,
   GraduationCap,
@@ -159,6 +161,26 @@ const projects = [
     href: 'https://github.com/menghong-heng/beautiful_soup_scrape',
     tags: ['NLP', 'Classification', 'Web Scraping'],
   },
+  {
+    title: 'Mini Mart — Local Food Ordering System',
+    period: '2026',
+    stack:
+      'Python, FastAPI, PostgreSQL, SQLAlchemy, Docker',
+    description:
+      'Developed a small food-ordering web application for a local client, featuring menu browsing, order placement, and order-status tracking. Designed PostgreSQL data models for menus, tables, and orders to support reliable data storage and retrieval.',
+    href: 'https://github.com/menghong-heng/mini_mart',
+    tags: ['Full Stack', 'API', 'PostgreSQL'],
+  },
+  {
+    title: 'TikTok Video Downloader',
+    period: '2025',
+    stack:
+      'Python, Requests, Web Scraping',
+    description:
+      'Built a lightweight Python tool for downloading TikTok videos without watermarks. Handles URL parsing, video extraction via API endpoints, and saves files locally with clean filenames.',
+    href: 'https://github.com/menghong-heng/tiktok_downloader',
+    tags: ['Python', 'Automation', 'Scripting'],
+  },
 ]
 
 const certificates = [
@@ -190,8 +212,8 @@ const certificates = [
 ]
 
 const metrics = [
-  { value: '12K+', label: 'Job records targeted' },
-  { value: '13', label: 'Job boards scraped' },
+  { value: '6+', label: 'End-to-end projects built' },
+  { value: '13', label: 'Data sources integrated' },
   { value: '8', label: 'Stock tickers monitored' },
   { value: 'Top 10', label: 'Innovation challenge result' },
 ]
@@ -257,6 +279,7 @@ function SectionHeader({
 
 function App() {
   const [hoveredNav, setHoveredNav] = useState<string | null>(null)
+  const [showAllProjects, setShowAllProjects] = useState(false)
 
   const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -566,7 +589,7 @@ function App() {
               viewport={{ once: true, amount: 0.16 }}
               className="grid gap-5 lg:grid-cols-2"
             >
-              {projects.map((project, index) => (
+              {projects.slice(0, 4).map((project, index) => (
                 <motion.article
                   key={project.title}
                   variants={fadeUp}
@@ -612,6 +635,89 @@ function App() {
                 </motion.article>
               ))}
             </motion.div>
+
+            {/* Extra projects revealed by "View More" */}
+            {showAllProjects && (
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={staggerContainer}
+                className="mt-5 grid gap-5 lg:grid-cols-2"
+              >
+                {projects.slice(4).map((project, index) => (
+                  <motion.article
+                    key={project.title}
+                    variants={fadeUp}
+                    whileHover={{ y: -5, scale: 1.005 }}
+                    className="premium-card group relative rounded-3xl p-6 transition"
+                  >
+                    {/* Project number */}
+                    <span className="project-number">
+                      {String(index + 5).padStart(2, '0')}
+                    </span>
+
+                    <div className="mb-4 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <Badge key={tag} variant="outline">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                      <h3 className="text-xl font-semibold text-foreground">
+                        {project.title}
+                      </h3>
+                      <span className="text-sm text-foreground/40">
+                        {project.period}
+                      </span>
+                    </div>
+                    <p className="premium-tech mt-2 text-sm text-primary/60">
+                      {project.stack}
+                    </p>
+                    <div className="premium-divider-wide my-4" />
+                    <p className="leading-relaxed text-foreground/60">
+                      {project.description}
+                    </p>
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground/70 transition group-hover:text-primary"
+                    >
+                      View repository
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </motion.article>
+                ))}
+              </motion.div>
+            )}
+
+            {/* View More / Show Less toggle */}
+            {projects.length > 4 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="mt-10 flex justify-center"
+              >
+                <button
+                  onClick={() => setShowAllProjects((prev) => !prev)}
+                  className="group inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-primary/5 px-7 py-3 text-sm font-semibold text-foreground/70 transition-all hover:border-primary/30 hover:bg-primary/10 hover:text-foreground hover:shadow-[0_0_24px_rgba(212,175,94,0.1)]"
+                >
+                  {showAllProjects ? (
+                    <>
+                      Show Less
+                      <ChevronUp className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
+                    </>
+                  ) : (
+                    <>
+                      View More Projects
+                      <ChevronDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+                    </>
+                  )}
+                </button>
+              </motion.div>
+            )}
           </div>
         </section>
 
