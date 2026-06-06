@@ -175,7 +175,7 @@ const certificates = [
   {
     title: 'AI in Education Online Bootcamp',
     detail: 'Introduction to AI with Teachable Machine',
-    href: '',
+    href: 'https://drive.google.com/file/d/1vSFlay5Xc5pWYW5c7fFnwiGtrkYEh5ma/view?usp=sharing',
   },
 ]
 
