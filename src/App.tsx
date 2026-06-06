@@ -177,6 +177,16 @@ const certificates = [
     detail: 'Introduction to AI with Teachable Machine',
     href: 'https://drive.google.com/file/d/1vSFlay5Xc5pWYW5c7fFnwiGtrkYEh5ma/view?usp=sharing',
   },
+  {
+    title: 'Certified LLM Security Professional (CLLM SP)',
+    detail: 'Red Team Leaders',
+    href: 'https://drive.google.com/file/d/1kPWPl51MJAstgMBe7Nzeo6QJL9Zyx_ke/view?usp=sharing',
+  },
+  {
+    title: 'Python And Django Framework For Beginners Complete Course',
+    detail: 'Udemy',
+    href: 'https://drive.google.com/file/d/1s_N7M0pg5tV7vwv3GLTFUes_8XH5NZM_/view?usp=sharing',
+  },
 ]
 
 const metrics = [
