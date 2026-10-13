@@ -21,7 +21,7 @@ This repository contains the source code for the personal developer and data sci
 
 - **Glassmorphic Interface**: Modern responsive UI constructed using Tailwind CSS and accessible UI primitives.
 - **Academic & Professional Profile**: Highlights dual-degree studies at the Institute of Technology of Cambodia (Data Science) and the Institute of Foreign Languages (English).
-- **Startup & Project Showcase**: Features Akara (AI-powered Khmer typing assistant), end-to-end Cambodian job market ETL pipelines, and NLP classifiers.
+- **Project Showcase**: Highlights end-to-end Cambodian job market ETL pipelines, academic citation automation bots, and NLP sentiment classifiers.
 - **Interactive Competency Matrix**: Categorized technical skills across data science, database engineering, BI tools, and software development.
 - **Automated CI/CD**: Automatic build, asset bundling, and GitHub Pages deployment powered by GitHub Actions.
 
